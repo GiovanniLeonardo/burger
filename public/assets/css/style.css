@@ -1,0 +1,70 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(240, 221, 125);
+  font-family: 'Lucida', Grande, sans-serif;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  text-align: center;
+ 
+}
+
+#notdevoured, #devoured, #addburger, #submit {
+  margin:0 auto;   
+  text-align:center;
+  display:table-cell;
+  vertical-align:middle;
+
+}
+
+#add, #bname {
+  margin:0 auto;   
+  text-align:center;
+}
+
+
+#img {
+  display:table;
+  height:50px;
+  width:50px;
+  margin:0 auto;   
+  text-align:center;
+  border:1px solid #333;
+}
+
+#image {
+  display:table-cell;
+  vertical-align:middle;
+  
+}
+#image img {
+  max-height:50%;
+  max-width:50%;
+}
+
+/* Remove extra left and right margins, due to padding in columns */
+/* .row {margin: 0 -5px;} */
+
+#submit { 
+  text-align: center;
+  }
+
+/* Float four columns side by side */
+.column {
+  float: left;
+  width: 50%;
+  padding: 100px;
+}
+
+/* Style the counter cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  text-align: center;
+  background-color: #f1f1f1;
+}
+

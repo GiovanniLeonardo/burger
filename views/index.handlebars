@@ -1,0 +1,51 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <h1>EAT-DA-BURGER!</h1>
+            <img src="/assets/img/top_burger.png" alt="burger" class="img" />
+         	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+         {{!-- <img src="/assets/img/logo.JPG" alt="burger" class="IMG" /> --}}
+        </div>
+    </div>
+</div>
+
+
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <h3>Burgers to Devour!</h3>
+          {{#each burgers}}
+            {{#unless devoured}}
+              {{> burgers/burger-block devoured=true}}
+            {{/unless}}
+          {{/each}}
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <h3>Burgers that are Devoured!</h3>
+          {{#each burgers}}
+           {{#if devoured}}
+            {{> burgers/burger-block devoured=false}}
+          {{/if}}
+        {{/each}}
+    </div>
+  </div>
+
+<div class="column" id="submit">
+  <div class="row">
+    <div class="col-md-12" >
+      <p>Enter a burger that you would like to eat!</p>
+          <form class="create-form">
+          <div class="form-group">
+            <label for="ca"></label>
+           <input type="text-center" id="ca" name="name" placeholder="Burger Name"><br><br>
+       <button type="submit" class="center-block btn btn-primary">Submit</button>
+      </div>
+    </form>
+  </div> 
+
+
+
